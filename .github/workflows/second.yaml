@@ -1,0 +1,22 @@
+name: my second githubactions workflow
+on: push
+jobs:
+  deploying the job:
+     runs-on: ubuntu-latest
+     steps:
+     - name: checkout the repo
+       uses: actions/checkout@v3
+     - name: updating the packages
+       run: sudo apt-get update
+     - name: installing git
+       run: sudo apt-get install git -y
+     - name: installing java
+       run: sudo apt-get install java -y
+     - name: installing maven
+       run: sudo apt-get install maven -y
+     - name: check the versions
+       run: |
+       git --version
+       java --version
+       mvn -v
+       
