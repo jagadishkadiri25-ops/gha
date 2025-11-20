@@ -1,8 +1,8 @@
 name : my first githubactions workflow
-on : push
- jobs:
-   basic-demo:
-     runs-on : ubuntu-server
+  on : push
+  jobs:
+    basic-demo:
+      runs-on : ubuntu-server
       steps:
        - name: update the packages
          run : apt-get update 
