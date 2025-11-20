@@ -1,7 +1,7 @@
 name: my second githubactions workflow
 on: push
 jobs:
-  deploying the job:
+  deploying-the-job:
      runs-on: ubuntu-latest
      steps:
      - name: checkout the repo
