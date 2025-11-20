@@ -11,7 +11,7 @@ jobs:
      - name: installing git
        run: sudo apt-get install git -y
      - name: installing java
-       run: sudo apt-get install java -y
+       run: sudo apt-get install -y default-jdk
      - name: installing maven
        run: sudo apt-get install maven -y
      - name: check the versions
