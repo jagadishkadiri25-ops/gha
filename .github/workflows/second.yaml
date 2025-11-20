@@ -16,7 +16,7 @@ jobs:
        run: sudo apt-get install maven -y
      - name: check the versions
        run: |
-       git --version
+       git -version
        java --version
        mvn -v
        
