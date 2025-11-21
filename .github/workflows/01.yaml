@@ -38,4 +38,5 @@ jobs:
         uname -r
         hostname
         cat /etc/os-release
-      
+     - name: execute the shell script
+       run: ./fruits.sh
