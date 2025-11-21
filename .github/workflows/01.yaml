@@ -15,12 +15,10 @@ jobs:
        run: cat /etc/os-release
      - name: print few env variable
        run: echo "My name is $RUNNER_NAME"
-     - name: custom variables
-       run: |
-         WINNER_NAME="Ganesh"
-         echo "Winner is $WINNER_NAME"
-     - name: creating an file
-       run: echo "My name is $RUNNER_NAME Winner is $WINNER_NAME" > prizes.txt
+     - name: set custom variable
+       run: echo "WINNER_NAME=Ganesh" >> $GITHUB_ENV
+     - name: creating a file
+       run: echo -e "My name is $RUNNER_NAME\nWinner is $WINNER_NAME" > prizes.txt
      - name: print specific text from the above file
        run: cat prizes.txt | grep "name"
      - name: conversion from small to big
@@ -33,3 +31,6 @@ jobs:
        uses: actions/checkout@v4
      - name: List all files
        run: ls -ltr
+     - name: reading readme.md file
+       run: cat README.md
+      
