@@ -1,0 +1,14 @@
+name: part4 workflow1
+on : workflow_dispatch
+branch: main
+jobs: 
+  systeminfo:
+    name: execute the system related information
+    runs-on: ubuntu-latest
+    steps:
+     - name: identifying the name
+       run: uname -r
+     - name: identifying the hostname
+       run: hostname
+     - name: identifying the os
+       run: cat /etc/os-release
