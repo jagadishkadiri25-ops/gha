@@ -39,4 +39,4 @@ jobs:
         hostname
         cat /etc/os-release
      - name: execute the shell script
-       run: ./fruits.sh
+       run: sh fruits.sh
