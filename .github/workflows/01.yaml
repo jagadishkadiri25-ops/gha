@@ -13,5 +13,9 @@ jobs:
        run: hostname
      - name: identifying the os
        run: cat /etc/os-release
-     - name: run env variable
-       run: env
+     - name: print few env variable
+       run: echo "My name is $RUNNER_NAME"
+     - name: custom variables
+       run: |
+         WINNER_NAME="Ganesh"
+         echo "Winner is $WINNER_NAME"
