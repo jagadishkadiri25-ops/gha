@@ -1,6 +1,6 @@
 name: part4 workflow1
 on : 
-   workflow_dispatch:
+   push:
      branches: main
 jobs: 
   systeminfo:
@@ -19,3 +19,11 @@ jobs:
        run: |
          WINNER_NAME="Ganesh"
          echo "Winner is $WINNER_NAME"
+     - name: creating an file
+       run: echo "My name is $RUNNER_NAME" &&  "Winner is $WINNER_NAME" > prizes.txt
+     - name: print specific text from the above file
+       run: cat prizes.txt | grep "name"
+     - name: conversion from small to big
+       run: cat prizes.txt | tr 'a-z' 'A-Z'
+     - name: check the word count
+       run: cat prizes.txt | wc -w
