@@ -4,7 +4,7 @@ on: push
 
 jobs:
    build-the-job:
-   name: Executing the linux commmands
+    name: Executing the linux commmands
     runs-on: ubuntu-latest
     steps:
       - name: display the name
