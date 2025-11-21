@@ -13,3 +13,5 @@ jobs:
        run: hostname
      - name: identifying the os
        run: cat /etc/os-release
+     - name: run env variable
+       run: env
