@@ -1,7 +1,7 @@
 name: part4 workflow1
 on : 
-workflow_dispatch:
- branches: main
+   push:
+     branches: main
 jobs: 
   systeminfo:
     name: execute the system related information
