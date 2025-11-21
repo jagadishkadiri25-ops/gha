@@ -27,3 +27,5 @@ jobs:
        run: cat prizes.txt | tr 'a-z' 'A-Z'
      - name: check the word count
        run: cat prizes.txt | wc -w
+     - name: List files
+        run: ls -ltr
