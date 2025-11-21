@@ -33,4 +33,9 @@ jobs:
        run: ls -ltr
      - name: reading readme.md file
        run: cat README.md
+     - name: running multiple commands
+       run: |
+        uname -r
+        hostname
+        cat /etc/os-release
       
