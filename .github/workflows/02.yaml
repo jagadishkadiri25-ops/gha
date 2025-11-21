@@ -1,0 +1,32 @@
+name: workflow from part 9 to part 11
+
+on:
+  push:
+     branch: main
+jobs:
+  Build-job:
+     name: Building an Application
+     runs-on: ubuntu-latest
+     steps:
+       - name: Build
+         run: echo "Building Kumari sarees application"
+  Test-job:
+     name: Testing an Application
+     runs-on: ubuntu-latest
+     steps:
+       - name: Test
+         run: echo "Testing Kumari sarees application"
+  package-job:
+      name: Packaging an application
+      runs-on: ubuntu-latest
+      needs: [build-job,Test-job]
+      steps:
+        - name: package
+          run: echo "Packaging Kumari sarees application"
+  Docker-Build-job:
+      name: Building an Docker image
+      runs-on: ubuntu-latest
+      needs: [package-job]
+      steps:
+        - name: Docker image
+          run: echo "Generating an Docker image"
