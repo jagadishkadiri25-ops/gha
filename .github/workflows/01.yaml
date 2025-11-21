@@ -29,3 +29,7 @@ jobs:
        run: cat prizes.txt | wc -w
      - name: List files
        run: ls -ltr
+     - name: Checkout repository
+       uses: actions/checkout@v4
+     - name: List all files
+       run: ls -ltr
