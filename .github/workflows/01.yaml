@@ -28,4 +28,4 @@ jobs:
      - name: check the word count
        run: cat prizes.txt | wc -w
      - name: List files
-        run: ls -ltr
+       run: ls -ltr
