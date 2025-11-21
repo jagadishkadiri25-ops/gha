@@ -3,7 +3,7 @@ name: All linux commands
 on: push
 
 jobs:
-   name: Executing-the-linux-commmands
+   linux-job:
    runs-on: ubuntu-latest
    steps:
       - name: display the name
