@@ -1,0 +1,16 @@
+name: All linux commands
+
+on: push
+
+jobs:
+   name: Executing-the-linux-commmands
+   runs-on: ubuntu-latest
+   steps:
+      - name: display the name
+        run: uname
+        
+      - name: display the current directory
+        run: pwd
+        
+      - name: list all the files and directories
+        run : ls -lrtha
