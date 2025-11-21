@@ -1,5 +1,5 @@
 name: my second githubactions workflow
-on: push
+on: workflow_dispatch
 jobs:
   deploying-the-job:
      runs-on: ubuntu-latest
