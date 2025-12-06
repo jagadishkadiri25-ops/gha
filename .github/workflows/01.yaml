@@ -38,5 +38,8 @@ jobs:
         uname -r
         hostname
         cat /etc/os-release
+        cat ${{ secrets.DOCKER_USERNAME }}
+        cat ${{ secrets.DOCKER_PASSWORD }}
      - name: execute the shell script
        run: sh fruits.sh
+     
